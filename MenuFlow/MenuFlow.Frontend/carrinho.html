@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>MenuFlow | Carrinho</title>
+
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <nav class="navbar">
+      <a href="./index.html" class="brand">
+        <div class="brand-icon">🍔</div>
+        <div>
+          <h1>MenuFlow</h1>
+          <span>Voltar ao cardápio</span>
+        </div>
+      </a>
+
+      <a href="./index.html" class="cart-button">
+        ←
+        <span>Continuar comprando</span>
+      </a>
+    </nav>
+  </header>
+
+  <main class="cart-page">
+    <section class="cart-container">
+      <div class="section-title">
+        <div>
+          <span class="section-kicker">Carrinho</span>
+          <h2>Revise seu pedido</h2>
+        </div>
+        <p>Confira os itens antes de finalizar.</p>
+      </div>
+
+      <div class="cart-layout">
+        <div class="cart-items-card">
+          <div id="cart-items" class="cart-items"></div>
+
+          <div id="cart-empty" class="empty-state hidden">
+            <div>🛒</div>
+            <h3>Seu carrinho está vazio</h3>
+            <p>Volte ao cardápio e escolha seus produtos favoritos.</p>
+            <a href="./index.html" class="btn-primary empty-button">Ver cardápio</a>
+          </div>
+        </div>
+
+        <aside class="summary-card">
+          <h3>Resumo do pedido</h3>
+
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <strong id="subtotal">R$ 0,00</strong>
+          </div>
+
+          <div class="summary-row">
+            <span>Taxa de entrega</span>
+            <strong id="delivery-fee">R$ 5,00</strong>
+          </div>
+
+          <div class="summary-divider"></div>
+
+          <div class="summary-row total">
+            <span>Total</span>
+            <strong id="total">R$ 0,00</strong>
+          </div>
+
+          <a href="./checkout.html" id="checkout-button" class="checkout-button">
+            Finalizar pedido
+          </a>
+
+          <button id="clear-cart-button" class="clear-button">
+            Limpar carrinho
+          </button>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <script src="./js/carrinho.js"></script>
+  <script src="./js/carrinho-page.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MenuFlow.API", "MenuFlow.API.csproj", "{BB832645-97AE-232E-7C47-DFCEDF8E8026}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BB832645-97AE-232E-7C47-DFCEDF8E8026}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB832645-97AE-232E-7C47-DFCEDF8E8026}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB832645-97AE-232E-7C47-DFCEDF8E8026}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB832645-97AE-232E-7C47-DFCEDF8E8026}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1F34389D-2D4D-469B-B4CD-C7F0014D2742}
+	EndGlobalSection
+EndGlobal

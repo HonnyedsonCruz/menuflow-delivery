@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>MenuFlow | Cardápio Online</title>
+
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar">
+      <div class="brand">
+        <div class="brand-icon">🍔</div>
+        <div>
+          <h1>MenuFlow</h1>
+          <span>Delivery online</span>
+        </div>
+      </div>
+
+      <a href="./carrinho.html" class="cart-button">
+        🛒
+        <span>Carrinho</span>
+        <strong id="cart-count">0</strong>
+      </a>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-content">
+        <span class="badge">Aberto agora • Entrega rápida</span>
+        <h2>Seu pedido favorito em poucos cliques.</h2>
+        <p>
+          Escolha seus lanches, bebidas e sobremesas. Monte seu carrinho e finalize seu pedido de forma simples.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#cardapio" class="btn-primary">Ver cardápio</a>
+          <a href="./pedido.html" class="btn-secondary">Acompanhar pedido</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="food-emoji">🍕</div>
+        <h3>Combo especial</h3>
+        <p>Pizza + Bebida + Sobremesa</p>
+        <strong>R$ 59,90</strong>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section id="cardapio" class="menu-section">
+      <div class="section-title">
+        <div>
+          <span class="section-kicker">Cardápio</span>
+          <h2>Escolha seu pedido</h2>
+        </div>
+        <p>Produtos carregados diretamente da API MenuFlow.</p>
+      </div>
+
+      <div class="filters">
+        <div class="search-box">
+          <input 
+            type="text" 
+            id="search-input" 
+            placeholder="Buscar produto..." 
+          />
+        </div>
+
+        <div class="category-list" id="category-list">
+          <button class="category-button active" data-category="all">Todos</button>
+        </div>
+      </div>
+
+      <div id="loading" class="loading">
+        Carregando produtos...
+      </div>
+
+      <div id="products-grid" class="products-grid"></div>
+
+      <div id="empty-state" class="empty-state hidden">
+        <div>🔎</div>
+        <h3>Nenhum produto encontrado</h3>
+        <p>Tente buscar por outro nome ou categoria.</p>
+      </div>
+    </section>
+  </main>
+
+  <div id="toast" class="toast hidden">
+    Produto adicionado ao carrinho!
+  </div>
+
+  <footer class="footer">
+    <p>MenuFlow © 2026 — Sistema de Delivery desenvolvido em C#/.NET</p>
+  </footer>
+
+  <script src="./js/api.js"></script>
+  <script src="./js/carrinho.js"></script>
+  <script src="./js/cardapio.js"></script>
+</body>
+</html>

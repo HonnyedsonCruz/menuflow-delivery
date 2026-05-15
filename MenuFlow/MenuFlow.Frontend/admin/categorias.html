@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>MenuFlow | Categorias Admin</title>
+
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <div class="admin-layout">
+    <aside class="admin-sidebar">
+      <a href="./dashboard.html" class="brand admin-brand">
+        <div class="brand-icon">🍔</div>
+        <div>
+          <h1>MenuFlow</h1>
+          <span>Admin</span>
+        </div>
+      </a>
+
+      <nav class="admin-nav">
+        <a href="./dashboard.html">Dashboard</a>
+        <a href="./pedidos.html">Pedidos</a>
+        <a href="./produtos.html">Produtos</a>
+        <a href="./categorias.html" class="active">Categorias</a>
+        <a href="../index.html">Ver loja</a>
+      </nav>
+
+      <button id="logout-button" class="admin-logout">
+        Sair
+      </button>
+    </aside>
+
+    <main class="admin-main">
+      <header class="admin-topbar">
+        <div>
+          <span class="section-kicker">Administração</span>
+          <h2>Categorias</h2>
+        </div>
+
+        <div class="admin-actions">
+          <button id="open-category-form-button" class="admin-action-button">
+            Nova categoria
+          </button>
+
+          <div class="admin-user-card">
+            <span id="admin-user-name">Admin</span>
+            <small id="admin-user-email">admin@menuflow.com</small>
+          </div>
+        </div>
+      </header>
+
+      <section id="category-form-card" class="admin-form-card hidden">
+        <div class="admin-panel-header">
+          <h3 id="category-form-title">Nova categoria</h3>
+          <button id="close-category-form-button" class="admin-small-button danger">
+            Fechar
+          </button>
+        </div>
+
+        <form id="category-form" class="admin-product-form">
+          <input type="hidden" id="categoriaId" />
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="nome">Nome da categoria</label>
+              <input type="text" id="nome" placeholder="Ex: Hambúrgueres" required />
+            </div>
+
+            <div class="form-group">
+              <label for="ativa">Status</label>
+              <select id="ativa" class="admin-select">
+                <option value="true">Ativa</option>
+                <option value="false">Inativa</option>
+              </select>
+            </div>
+
+            <div class="form-group full">
+              <label for="descricao">Descrição</label>
+              <textarea id="descricao" rows="4" placeholder="Ex: Lanches artesanais, combos e especiais..."></textarea>
+            </div>
+          </div>
+
+          <button type="submit" id="save-category-button" class="checkout-button">
+            Salvar categoria
+          </button>
+
+          <p id="category-form-error" class="checkout-error hidden"></p>
+        </form>
+      </section>
+
+      <section class="admin-filters-card">
+        <div class="form-group">
+          <label for="category-search">Buscar categoria</label>
+          <input type="text" id="category-search" placeholder="Digite o nome da categoria..." />
+        </div>
+      </section>
+
+      <section id="categories-loading" class="loading">
+        Carregando categorias...
+      </section>
+
+      <section id="admin-categories-grid" class="admin-categories-grid hidden"></section>
+
+      <div id="categories-empty" class="empty-state hidden">
+        <div>📂</div>
+        <h3>Nenhuma categoria encontrada</h3>
+        <p>Cadastre categorias para organizar o cardápio.</p>
+      </div>
+
+      <p id="categories-error" class="checkout-error hidden"></p>
+    </main>
+  </div>
+
+  <div id="toast" class="toast hidden"></div>
+
+  <script src="../js/api.js"></script>
+  <script src="../js/admin-auth.js"></script>
+  <script src="../js/admin-categorias.js"></script>
+</body>
+</html>

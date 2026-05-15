@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>MenuFlow | Login Admin</title>
+
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <main class="admin-login-page">
+    <section class="admin-login-card">
+      <a href="../index.html" class="brand admin-login-brand">
+        <div class="brand-icon">🍔</div>
+        <div>
+          <h1>MenuFlow</h1>
+          <span>Painel administrativo</span>
+        </div>
+      </a>
+
+      <div class="admin-login-title">
+        <span class="section-kicker">Admin</span>
+        <h2>Entrar no painel</h2>
+        <p>Gerencie pedidos, produtos, categorias e acompanhe o desempenho do restaurante.</p>
+      </div>
+
+      <form id="admin-login-form" class="admin-login-form">
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" placeholder="admin@menuflow.com" required />
+        </div>
+
+        <div class="form-group">
+          <label for="senha">Senha</label>
+          <input type="password" id="senha" placeholder="Digite sua senha" required />
+        </div>
+
+        <button type="submit" id="login-button" class="checkout-button">
+          Entrar
+        </button>
+
+        <p id="login-error" class="checkout-error hidden"></p>
+      </form>
+
+      <div class="admin-login-hint">
+        <strong>Usuário inicial:</strong>
+        <span>admin@menuflow.com / 123456</span>
+      </div>
+    </section>
+  </main>
+
+  <script src="../js/api.js"></script>
+  <script src="../js/admin-auth.js"></script>
+</body>
+</html>

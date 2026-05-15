@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>MenuFlow | Dashboard Admin</title>
+
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <div class="admin-layout">
+    <aside class="admin-sidebar">
+      <a href="./dashboard.html" class="brand admin-brand">
+        <div class="brand-icon">🍔</div>
+        <div>
+          <h1>MenuFlow</h1>
+          <span>Admin</span>
+        </div>
+      </a>
+
+      <nav class="admin-nav">
+        <a href="./dashboard.html" class="active">Dashboard</a>
+        <a href="./pedidos.html">Pedidos</a>
+        <a href="./produtos.html">Produtos</a>
+        <a href="./categorias.html">Categorias</a>
+        <a href="../index.html">Ver loja</a>
+      </nav>
+
+      <button id="logout-button" class="admin-logout">
+        Sair
+      </button>
+    </aside>
+
+    <main class="admin-main">
+      <header class="admin-topbar">
+        <div>
+          <span class="section-kicker">Painel</span>
+          <h2>Dashboard</h2>
+        </div>
+
+        <div class="admin-user-card">
+          <span id="admin-user-name">Admin</span>
+          <small id="admin-user-email">admin@menuflow.com</small>
+        </div>
+      </header>
+
+      <section id="dashboard-loading" class="loading">
+        Carregando dashboard...
+      </section>
+
+      <section id="dashboard-content" class="admin-dashboard-content hidden">
+        <div class="metrics-grid">
+          <article class="metric-card">
+            <span>Total de pedidos</span>
+            <strong id="totalPedidos">0</strong>
+          </article>
+
+          <article class="metric-card">
+            <span>Pedidos hoje</span>
+            <strong id="pedidosHoje">0</strong>
+          </article>
+
+          <article class="metric-card">
+            <span>Pedidos pendentes</span>
+            <strong id="pedidosPendentes">0</strong>
+          </article>
+
+          <article class="metric-card highlight">
+            <span>Faturamento total</span>
+            <strong id="faturamentoTotal">R$ 0,00</strong>
+          </article>
+
+          <article class="metric-card highlight">
+            <span>Faturamento hoje</span>
+            <strong id="faturamentoHoje">R$ 0,00</strong>
+          </article>
+        </div>
+
+        <div class="admin-panels-grid">
+          <section class="admin-panel">
+            <div class="admin-panel-header">
+              <h3>Produtos mais vendidos</h3>
+              <span>Top 5</span>
+            </div>
+
+            <div id="top-products-list" class="admin-list"></div>
+          </section>
+
+          <section class="admin-panel">
+            <div class="admin-panel-header">
+              <h3>Pedidos por status</h3>
+              <span>Resumo</span>
+            </div>
+
+            <div id="status-list" class="admin-list"></div>
+          </section>
+        </div>
+      </section>
+
+      <p id="dashboard-error" class="checkout-error hidden"></p>
+    </main>
+  </div>
+
+  <script src="../js/api.js"></script>
+  <script src="../js/admin-auth.js"></script>
+  <script src="../js/admin-dashboard.js"></script>
+</body>
+</html>
